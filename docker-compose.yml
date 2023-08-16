@@ -9,7 +9,7 @@ services:
       dockerfile: ./docker/node/Dockerfile
     # こうしておくことで後で3000ポートからアクセスすることが可能になる。
     ports:
-      - 3000:3000
+      - 5173:5173
     # docker 内のディレクトリと同期させるディレクトリを指定。
     # ディレクトリが存在しない場合は勝手に作成される。
     volumes:
