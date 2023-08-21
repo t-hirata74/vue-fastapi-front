@@ -16,6 +16,16 @@
    Parch: '親・子の同伴者数は？',
    SibSp: '兄弟姉妹の同伴者数は？'
  })
+
+  const displayOutput = (): void => {
+   alert(`
+     性別: ${features.Sex}
+     階級: ${features.Pclass} 
+     年齢: ${features.Age} 
+     親・子同伴者数: ${features.Parch} 
+     兄弟姉妹同伴者数: ${features.SibSp}
+   `)
+  }
 </script>
 
 <template>
@@ -56,7 +66,7 @@
       </option>
     </select> 人
     <br>
-    <button class="btn btn-primary">結果を出力</button>
+    <button class="btn btn-primary" v-on:click="displayOutput()">結果を出力</button>
   </div>
 </div>
 </template>
