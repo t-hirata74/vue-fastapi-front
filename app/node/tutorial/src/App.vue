@@ -1,4 +1,21 @@
 <script setup lang="ts">
+ import {reactive} from 'vue'
+ // 型を定義する場合は冒頭に type を使う (interface を使った書き方もある。その場合は "=" を外す)
+ type typeOfFeatures = {
+  Sex: '男性'|'女性'|'性別は？'
+  Pclass: string
+  Age: number|'年齢は？'
+  Parch: number|'親・子の同伴者数は？'
+  SibSp: number|'兄弟姉妹の同伴者数は？'
+ }
+
+ const features = reactive<typeOfFeatures>({
+   Sex: '性別は？',
+   Pclass: '階級は？',
+   Age: '年齢は？',
+   Parch: '親・子の同伴者数は？',
+   SibSp: '兄弟姉妹の同伴者数は？'
+ })
 </script>
 
 <template>
